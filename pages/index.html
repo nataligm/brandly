@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('../templates/head.html')
+
+<body>
+@@include('../templates/header.html')
+@@include('../templates/latest-products.html')
+@@include('../templates/trending-items.html')
+@@include('../templates/from-the-blog.html')
+@@include('../templates/subscribe.html')
+@@include('../templates/footer.html')
+<script src="/js/jquery.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $(".owl-carousel").owlCarousel({
+            center: true,
+            items: 1,
+            loop: true,
+            autoplay: true,
+            dots: true,
+            lazyLoad: true,
+            animateOut: 'fadeOut',
+            responsive: true,
+            autoplayTimeout: 3000
+
+        });
+
+
+        $(document).on("click", ".size-item", function() {
+            $(".checked").removeClass("checked");
+            $(this).addClass("checked");
+        });
+    });
+</script>
+
+</body>
+</html>

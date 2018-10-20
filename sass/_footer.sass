@@ -1,0 +1,21 @@
+.container
+  position: relative
+  padding: 71px 0 71px 0
+.heart
+  width: 15px
+  height: 15px
+  background-color: $red-color
+  transform: rotate(-45deg)
+  margin: 0 auto
+  &:before, &:after
+    content: ''
+    position: absolute
+    width: 15px
+    height: 15px
+    border-radius: 50%
+    background-color: $red-color
+    top: -10px
+
+  &:after
+    top: 0px
+    left: 10px

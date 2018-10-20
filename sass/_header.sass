@@ -1,0 +1,288 @@
+
+.header
+  position: relative
+  color: #fff
+  //.list-overlay
+  //  display: block
+  //  opacity: 0
+  //  visibility: hidden
+  //  position: absolute
+  //  top: 0
+  //  left: 0
+  //  width: 100%
+  //  height: 100%
+  //  background: linear-gradient(rgba(253, 48, 47, 0.85), rgba(253, 48, 47, 0.85))
+  //  //z-index: 10
+  .header-content
+    width: 62.3%
+    display: flex
+    justify-content: space-between
+    position: relative
+
+
+    #check-menu
+      display: none
+    .burger-label
+      width: 100px
+      height: 28px
+      cursor: pointer
+
+
+
+  .header-wrapper
+    display: flex
+    padding-top: 24px
+    justify-content: center
+    width: 100%
+    position: absolute
+    z-index: 999
+    color: green
+    .logo
+      @include bebas-b
+      color: $red-color
+      font-size: 48px
+      word-wrap: normal
+
+      span
+        font-size: 36px
+
+    .navigation
+      font-size: 18px
+      width: 679px
+      display: flex
+      justify-content: space-between
+      align-items: center
+      a
+        @include open-sans-r
+        color: #fff
+        font-size: 18px
+    .burger-line
+      display: none
+  //05.09.18 display: none
+  .slider
+    position: relative
+    .item
+      position: relative
+      max-height: 932px
+      background-repeat: no-repeat
+      background-size: cover
+      background-position-x: 50%
+      width: 100%
+      display: flex
+      flex-direction: column
+      flex-wrap: wrap
+    .item[data-src] img
+      width: 100%
+    .item-caption
+      color: #fff
+      font-size: 40px
+      //min-width: 1183px
+      padding: 313px 30px
+      display: flex
+      flex-direction: column
+      //align-items: center
+      p:not(:last-child)
+        margin-bottom: 50px
+        text-align: center
+      .collection
+        @include open-sans-l
+        font-size: 30px
+        letter-spacing: 9px
+        font-weight: 300
+        text-transform: uppercase
+        flex-wrap: wrap
+      .discount
+        @include lato-b
+        font-size: 60px
+        text-transform: uppercase
+        flex-wrap: wrap
+      .tagline
+        @include open-sans-l
+        font-size: 30px
+        font-weight: 300
+        text-transform: uppercase
+        line-height: 36px
+        margin-bottom: 50px
+        letter-spacing: 2px
+        flex-wrap: wrap
+    .shop-now-btn
+      @include lato-b
+      padding: 20px 49px
+      color: #fff
+      text-transform: uppercase
+      font-size: 18px
+      align-self: center
+      border: 2px solid white
+      margin-bottom: 312px
+      &:active
+        box-shadow: inset 0 0 12px black
+    img
+      width: 100%
+      div
+        max-height: 900px
+
+  //must be common
+  .container
+    max-width: 1171px
+  .owl-dots
+    position: absolute
+    left: 47.4%
+    bottom: 57px
+@media screen and (max-width: 1200px)
+   .header
+      .owl-dots
+        left: 45.4%
+      .header-content
+        min-width: 74%
+        .navigation
+          max-width: 620px
+      .slider
+        .item
+          background-position: 57%
+        .item-caption
+          .collection
+            font-size: 24px
+          .discount
+            font-size: 48px
+          .tagline
+            font-size: 24px
+@media screen and (max-width: 1024px)
+  .header
+    .owl-dots
+      left: 45%
+    .header-content
+      .navigation
+        max-width: 529px
+    .slider
+      .item
+        background-position: 56%
+      .item-caption
+        .collection
+          font-size: 23px
+        .discount
+          font-size: 43px
+        .tagline
+          font-size: 23px
+@media screen and (max-width: 768px)
+  .header
+    .header-wrapper
+      background-color: #f3f3f3
+      padding-bottom: 34px
+      .header-content
+        justify-content: flex-end
+      .logo
+        position: absolute
+        top: 0
+        left: 0
+      .navigation
+        flex-direction: column
+        align-items: flex-end
+        max-width: 320px
+        position: absolute
+        top: 62px
+        right: -292px
+        background-color: #f3f3f3
+        max-height: 0
+        font-size: 0
+        overflow: hidden
+        transition: .5s all
+        a
+          padding: 20px 30px 20px 0
+          width: 100%
+          text-align: right
+          display: block
+          text-transform: uppercase
+          border-bottom: 1px solid #bbbbbb
+          box-sizing: border-box
+          color: #7d7676
+          font-weight: bold
+        a:first-of-type
+          border-top: 1px solid #bbbbbb
+      .burger-line
+        width: 28px
+        height: 3px
+        background-color: #7d7676
+        display: block
+        position: absolute
+        top: 4px
+        right: 10px
+        transition: .5s all
+      .first-l
+        top: 14px
+      .second-l
+        top: 24px
+      .third-l
+        top: 24px
+      .fourth-l
+        top: 34px
+      #check-menu:checked ~ .first-l
+        display: none
+      #check-menu:checked ~ .second-l
+        transform: rotate(45deg)
+      #check-menu:checked ~ .third-l
+        transform: rotate(-45deg)
+      #check-menu:checked ~ .fourth-l
+        display: none
+      #check-menu:checked ~ .navigation
+        max-height: 500px
+        font-size: 16px
+        transform: translateX(-185px)
+      #check-menu:checked ~ .list-overlay
+        visibility: visible
+        opacity: 1
+    .slider
+      .item-caption
+        .collection
+          font-size: 19px
+        .discount
+          font-size: 33px
+        .tagline
+          font-size: 17px
+      .owl-dots
+        left: 43.2%
+      .item
+        background-position-x: 55%
+@media screen and (max-width: 480px)
+    .header
+      .slider
+        .item
+          background-position: 54.3%
+        .item-caption
+          .collection
+            font-size: 18px
+          .discount
+            font-size: 36px
+          .tagline
+            font-size: 18px
+            line-height: 22px
+          .shop-now-btn
+            font-size: 11px
+        .owl-dots
+          left: 39%
+      .header-wrapper
+        .navigation
+          right: -247px
+          a
+            font-size: 15px
+@media screen and (max-width: 320px)
+  .header
+    .header-wrapper
+      .navigation
+        max-width: 323px
+        right: -228px
+    .slider
+      .item-caption
+        padding: 200px 30px
+        .collection
+          font-size: 13px
+          line-height: 15px
+        .discount
+          font-size: 23px
+          line-height: 25px
+        .tagline
+          font-size: 12px
+          line-height: 16px
+      .owl-dots
+          left: 34%
+
+

@@ -1,0 +1,119 @@
+.from-the-blog
+  padding: 90px 0
+  //must be common
+  .container
+    max-width: 1171px
+    margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    padding-top: 0
+  .info-column
+    max-width: 570px
+    .read-more
+      @include open-sans-b
+      display: inline-block
+      border: 1px solid #333333
+      padding: 17px 37px
+      color: $grey-color
+      font-size: 16px
+      font-weight: 700
+
+  .section-title
+    position: relative
+    @include section-title
+    margin-bottom: 90px
+    &:before
+      content: ''
+      @include red-line
+      position: absolute
+      @include top-red-line-position
+    &:after
+      content: ''
+      @include red-line
+      position: absolute
+      @include bot-red-line-position
+
+  .from-the-blog-img
+    max-width: 570px
+    margin-bottom: 30px
+  h3
+    @include lato-b
+    color: $red-color
+    font-weight: 700
+    font-size: 30px
+    line-height: 26px
+    margin-bottom: 28px
+  .author
+    @include lato-r
+    font-weight: 400
+    margin-bottom: 29px
+    color: rgba(51, 51, 51, 0.8)
+  .desc
+    @include myriad-pro-r
+    padding: 30px 0 33px
+    border-top: 1px solid #ecf0f1
+    border-bottom: 1px solid #ecf0f1
+    line-height: 24px
+    font-size: 18px
+    font-weight: 400
+    color: rgba(51, 51, 51, 0.6)
+    margin-bottom: 30px
+
+@media screen and (max-width: 1200px)
+  .from-the-blog
+    padding-left: 60px
+    padding-right: 60px
+    .section-title
+      &:before, &:after
+        left: 44%
+    .info-column
+      max-width: 525px
+@media screen and (max-width: 1024px)
+  .from-the-blog
+    padding: 75px 0
+    .container
+      justify-content: center
+      padding-bottom: 0
+      .info-column
+        max-width: 570px
+        text-align: center
+        &:nth-child(odd)
+          margin-bottom: 50px
+@media screen and (max-width: 768px)
+  .from-the-blog
+    .info-column
+      .author
+        margin-bottom: 10px
+      .desc
+        padding: 10px 0 10px
+@media screen and (max-width: 480px)
+  .from-the-blog
+    padding: 75px 60px
+    .section-title
+      &:before, &:after
+        left: 35%
+    .container
+      padding: 0 10px
+      .info-column
+        h3
+          font-size: 22.7px
+        .desc
+          font-size: 17px
+@media screen and (max-width: 320px)
+  .from-the-blog
+    padding: 75px 50px
+    .section-title
+      font-size: 25px
+      &:before, &:after
+        left: 24%
+      &:before
+        top: -24px
+      &:after
+        bottom: -24px
+    .container
+      padding: 0
+      .info-column
+        h3
+          font-size: 16px
+          line-height: 18px

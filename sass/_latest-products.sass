@@ -1,0 +1,191 @@
+.latest-products
+  padding: 90px 0 60px 0
+  .section-title
+    position: relative
+    @include section-title
+    margin-bottom: 93px
+
+    &:before
+      content: ''
+      @include red-line
+      position: absolute
+      @include top-red-line-position
+    &:after
+      content: ''
+      @include red-line
+      position: absolute
+      @include bot-red-line-position
+
+  .item-list
+    justify-content: space-between
+    display: flex
+    flex-wrap: wrap
+
+    .item-group
+      position: relative
+      color: #fff
+    .item-group:not(.bottom-img)
+      max-width: 370px
+      margin-bottom: 30px
+    .cover
+      background: linear-gradient(rgba(34, 37, 51, 0.7), rgba(34, 37, 51, 0.7))
+      position: absolute
+      width: 100%
+      height: 100%
+      left: 0
+      top: 0
+      background-size: cover
+      display: flex
+      justify-content: center
+      align-items: center
+      .collection-title
+        @include open-sans-r-i
+        width: 311px
+        height: 349px
+        border: 3px solid #fff
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 40px
+
+      .collection-title-bottom
+        @include lato-b
+        position: relative
+        font-size: 45px
+        text-align: center
+        line-height: 53px
+        &:before
+          content: ''
+          @include white-line
+          position: absolute
+          left: 14%
+          top: -19px
+        &:after
+          content: ''
+          @include white-line
+          position: absolute
+          left: 14%
+          bottom: -9px
+      .second-ctb
+        &:before
+          content: ''
+          @include white-line
+          position: absolute
+          left: 27%
+          top: -19px
+        &:after
+          content: ''
+          @include white-line
+          position: absolute
+          left: 27%
+          bottom: -9px
+
+  .container
+    max-width: 1171px
+    margin: 0 auto
+    padding-top: 0
+    padding-bottom: 0
+
+@media screen and (max-width: 1200px)
+  .latest-products
+    padding-left: 60px
+    padding-right: 60px
+    .section-title
+      &:after, &:before
+        left: 45%
+    .item-list
+      .cover
+        .collection-title
+          max-width: 281px
+          max-height: 319px
+    .item-group
+      .item-img:not(.bottom-img)
+        max-width: 340px
+      .bottom-img
+        max-width: 525px
+@media screen and (max-width: 1024px)
+  .latest-products
+    padding: 75px 105px 50px
+    .section-title
+      &:before, &:after
+        left: 44%
+    .item-list
+      justify-content: center
+      .item-group
+        &:first-of-type
+          margin-right: 20px
+        &:not(:last-child)
+          margin-bottom: 20px
+        .item-img:not(.bottom-img)
+          max-width: 290px
+        .bottom-img
+          max-width: 570px
+      .cover
+        .collection-title
+          max-width: 235px
+          max-height: 271px
+        .collection-title-bottom
+          font-size: 41px
+        .second-ctb
+          font-size: 39px
+@media screen and (max-width: 768px)
+  .latest-products
+    padding-left: 78px
+    padding-right: 78px
+    .section-title
+      &:before, &:after
+        left: 41.5%
+    .item-list
+      .item-group
+        .bottom-img
+          max-width: 523px
+      .cover
+        .collection-title-bottom
+          &:before, &:after
+            left: 11%
+        .second-ctb
+          &:before, &:after
+            left: 24%
+@media screen and (max-width: 480px)
+  .latest-products
+    padding-left: 70px
+    padding-right: 70px
+    .section-title
+      &:before, &:after
+        left: 34%
+    .item-list
+      justify-content: center
+      .item-group:first-of-type
+        margin-right: 0
+      .cover
+        .collection-title
+          font-size: 32px
+        .collection-title-bottom
+          font-size: 32px
+          &:before, &:after
+            display: none
+        .second-ctb
+          font-size: 30px
+@media screen and (max-width: 320px)
+  .latest-products
+    padding-left: 50px
+    padding-right: 50px
+    .section-title
+      font-size: 25px
+      margin-bottom: 70px
+      &:before
+        left: 25%
+        top: -24px
+      &:after
+        left: 25%
+        bottom: -24px
+    .item-list
+      .cover
+        .collection-title
+          font-size: 25px
+        .collection-title-bottom
+          font-size: 21px
+          line-height: 27px
+        .second-ctb
+          font-size: 19px
+          line-height: 27px
