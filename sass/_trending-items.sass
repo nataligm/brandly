@@ -218,6 +218,30 @@
           .side-guide-btn
             padding-right: 32px
             padding-left: 32px
+@media screen and (max-width: 360px)
+  .trending-items
+    .section-title
+      font-size: 31px
+      &:before
+        left: 26%
+      &:after
+        left: 26%
+    .item-content
+      .item-description
+        .size-list
+          .size-item
+            &:first-of-type
+              padding-left: 13px
+              padding-right: 13px
+            &:nth-of-type(2)
+              padding-left: 16px
+              padding-right: 16px
+            &:nth-of-type(3)
+              padding-left: 11px
+              padding-right: 11px
+            &:nth-of-type(4)
+              padding-left: 7px
+              padding-right: 6px
 @media screen and (max-width: 320px)
   .trending-items
     padding-top: 75px
@@ -237,20 +261,7 @@
             line-height: 20px
         .item-caption
           font-size: 16px
-        .size-list
-          .size-item
-            &:first-of-type
-              padding-left: 13px
-              padding-right: 13px
-            &:nth-of-type(2)
-              padding-left: 16px
-              padding-right: 16px
-            &:nth-of-type(3)
-              padding-left: 11px
-              padding-right: 11px
-            &:nth-of-type(4)
-              padding-left: 7px
-              padding-right: 6px
+
         .trending-btns
           .shop-now-btn
             padding-right: 9px
